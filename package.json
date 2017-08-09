@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mustache-loader@git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+        "scope": null,
+        "escapedName": "mustache-loader",
+        "name": "mustache-loader",
+        "rawSpec": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+        "spec": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:bbc-fatima/hogan-loader.git#v1.0.0",
+          "sshUrl": "git+ssh://git@github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+          "httpsUrl": "git+https://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+          "gitUrl": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+          "shortcut": "github:bbc-fatima/hogan-loader#v1.0.0",
+          "directUrl": "https://raw.githubusercontent.com/bbc-fatima/hogan-loader/v1.0.0/package.json"
+        }
+      },
+      "/workspace/sport-sandbox/projects/bbcdotcom"
+    ]
+  ],
+  "_from": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+  "_id": "mustache-loader@0.3.1",
+  "_inCache": true,
+  "_location": "/mustache-loader",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mustache-loader@git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+    "scope": null,
+    "escapedName": "mustache-loader",
+    "name": "mustache-loader",
+    "rawSpec": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+    "spec": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:bbc-fatima/hogan-loader.git#v1.0.0",
+      "sshUrl": "git+ssh://git@github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+      "httpsUrl": "git+https://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+      "gitUrl": "git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+      "shortcut": "github:bbc-fatima/hogan-loader#v1.0.0",
+      "directUrl": "https://raw.githubusercontent.com/bbc-fatima/hogan-loader/v1.0.0/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git://github.com/bbc-fatima/hogan-loader.git#de17818f4c786b36f14dd84ad2a425fe8302ba84",
+  "_shasum": "4afe8b9a5fbe7af447240c6459c828fe78883599",
+  "_shrinkwrap": null,
+  "_spec": "mustache-loader@git://github.com/bbc-fatima/hogan-loader.git#v1.0.0",
+  "_where": "/workspace/sport-sandbox/projects/bbcdotcom",
+  "author": {
+    "name": "Kir Belevich",
+    "email": "kir@soulshine.in",
+    "url": "https://github.com/deepsweet"
+  },
+  "bugs": {
+    "url": "https://github.com/deepsweet/mustache-loader/issues"
+  },
+  "dependencies": {
+    "hogan.js": "^3.0.2",
+    "html-minifier": "^0.6.8",
+    "loader-utils": "^0.2.4"
+  },
+  "description": "Mustache loader for webpack",
+  "devDependencies": {
+    "eslint": "^0.8.1",
+    "jscs": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "de17818f4c786b36f14dd84ad2a425fe8302ba84",
+  "homepage": "https://github.com/deepsweet/mustache-loader",
+  "keywords": [
+    "webpack",
+    "loader",
+    "mustache",
+    "hogan"
+  ],
+  "license": "WTFPL",
+  "main": "index.js",
+  "name": "mustache-loader",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "hogan.js": "^3.0.2",
+    "webpack": "^1.4.3"
+  },
+  "readme": "## Mustache loader for [webpack](https://webpack.github.io/)\n\n[![npm](http://img.shields.io/npm/v/mustache-loader.svg?style=flat-square)](https://www.npmjs.org/package/mustache-loader)\n[![travis](http://img.shields.io/travis/deepsweet/mustache-loader.svg?style=flat-square)](https://travis-ci.org/deepsweet/mustache-loader)\n[![climate](http://img.shields.io/codeclimate/github/deepsweet/mustache-loader.svg?style=flat-square)](https://codeclimate.com/github/deepsweet/mustache-loader/code)\n[![peer deps](http://img.shields.io/david/peer/deepsweet/mustache-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/mustache-loader#info=peerDependencies)\n[![gratipay](http://img.shields.io/gratipay/deepsweet.svg?style=flat-square)](https://gratipay.com/deepsweet/)\n\nCompiles [Mustache](https://mustache.github.io/) templates with [Hogan](https://twitter.github.io/hogan.js/) and optionally [html-minifier](https://github.com/kangax/html-minifier).\n\n### Install\n\n```sh\n$ npm i -S mustache-loader\n```\n\n### Usage\n\n```javascript\nmodule: {\n    loaders: [ {\n        test: /\\.html$/,\n        loader: 'mustache'\n        // loader: 'mustache?minify'\n        // loader: 'mustache?{ minify: { removeComments: false } }'\n        // loader: 'mustache?noShortcut'\n    } ]\n}\n```\n\n```javascript\nvar template = require('./template.html');\nvar html = template({ foo: 'bar' });\n```\n\nIf `noShortcut` is passed, then Hogan compiled template is returned instead, so\nyou can pass it as partial.\n\n```javascript\nvar template = require('./template.html');\nvar template2 = require('./template2.html');\nvar html = template({ foo: 'bar' }, {partial: template2});\n```\n\n[Documentation: Using loaders](https://webpack.github.io/docs/using-loaders.html).\n\n### License\n[WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deepsweet/mustache-loader.git"
+  },
+  "scripts": {
+    "test": "eslint index.js && jscs index.js"
+  },
+  "version": "0.3.1"
+}
