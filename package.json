@@ -94,7 +94,7 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/deepsweet/mustache-loader.git#v1.4.0"
+    "url": "git://github.com/deepsweet/mustache-loader.git"
   },
   "scripts": {
     "test": "eslint index.js && jscs index.js"
